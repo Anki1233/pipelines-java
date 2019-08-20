@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  imageName: 'devops:$(Build.BuildId)'  
+  imageName: 'javadevops:$(Build.BuildId)'  
 
 steps:
 - script: |
