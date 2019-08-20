@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+  imageName: 'devops:$(Build.BuildId)'  
+
 steps:
 - script: |
     echo Starting the build
