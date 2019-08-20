@@ -14,3 +14,9 @@ steps:
     echo Starting the build
     mvn package
   displayName: 'Build with Maven'
+
+- script: |
+    docker build -f Dockerfile -t ankii123/$(imageName) .
+    docker login -u ankii123 -p Docker@123
+    docker push ankii123/$(imageName)
+  displayName: 'Pushing an Image'  
